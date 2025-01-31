@@ -2,7 +2,8 @@ streamlit
 altair
 matplotlib
 numpy
-pandas==1.4.4
-plotly==5.9.0
+pandas
+plotly
+plotly.express
 scipy
 seaborn
