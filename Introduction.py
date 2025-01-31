@@ -24,17 +24,17 @@ st.title(' :blue[How to find Hypothetical Genes]')
 st.markdown('''
            DNA sequencing has experienced a boom over the last couple of decades since
            the Human Genome Project was completed in the year 2000.  Since that 
-           time, many species have had their genomes sequence and research scientist
-           are faced with the problem of making sence of the sequences.  One of
+           time, many species have had their genome sequenced, and research scientist
+           are now faced with the problem of making sence of the sequences.  One of
            their tasks is to identify coding sequences (genes).  One approach to this
            problem is to search for Open Reading Frames (ORFs) - spans of DNA
-           between a START (ATG) and STOP (TAA, TAG, TGA) codon - and predict the
+           between a START (ATG) and a STOP (TAA, TAG, TGA) codon - and predict the
            hypothetical proteins that would be generated from them.
            
            Since DNA is interpreted in groups of three nucleotides (codons), a 
-           DNA strand has three distinct reading frames.  The double helix of a 
-           DNA molecule has two anti-parallel strands; with the two strands having 
-           three reading frames each, there are six possible frame translations.
+           DNA strand (not the double strand! )has three possible reading frames (see image below).  Given
+           that DNA is a double helix made up of two strands each with three possible
+           reading frame, any molecule of DNA has six possible reading frames.
            '''
            )
 
