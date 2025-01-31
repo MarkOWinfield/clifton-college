@@ -8,7 +8,7 @@ Created on Tue Dec  3 13:06:03 2024
 import streamlit as st
 from random import choice
 import pandas as pd
-import plotly_express as px
+import plotly.express as px
 import matplotlib.pyplot as plt
 import numpy as np
 
