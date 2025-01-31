@@ -4,6 +4,6 @@ matplotlib
 numpy
 pandas==1.4.4
 plotly==5.9.0
-plotly_express
+plotly.express
 scipy
 seaborn
