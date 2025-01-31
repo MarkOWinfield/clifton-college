@@ -156,7 +156,7 @@ the same region in many samples.
 
 with col2: 
     
-    st.image('./images/deoxy.jpg', caption='Deoxynucleotide')
+    st.image('./images/deoxy.jpg')
     st.markdown('''
                 - At carbon 2 there is an hydrogen (no oxygen}
                 - At carbon 3 there is a hydroxyl group (OH)
@@ -166,7 +166,7 @@ with col2:
                 other deoxynucleotides so the DNA fragment can continue to grow.
                 ''')
     
-    st.image('./images/dideoxy.jpg', caption='Dideoxy nucleotide')
+    st.image('./images/dideoxy.jpg')
     st.markdown('''
                 - At carbon 2 there is a hydrogen (no oxygen}
                 - At carbon 3 there is a hydrogen (no oxygen)
@@ -194,7 +194,7 @@ unknown_seq = unknown_seq.upper()
 
 st.header('Run the PCR reaction')
 
-st.image('./images/Eppendorfs_2.png', caption='Products of PCR', width = 1000)
+st.image('./images/Eppendorfs_2.png', width = 1000)
 
 
 sequence_list = terminator(unknown_seq)
@@ -230,37 +230,6 @@ for fragment in sequence_list:
         t_list.append(len(fragment))
         new_value = {'nucleotide': 'T', 'fragment length': len(fragment), 'track': 4}
         df.loc[len(df)] = new_value
-
-# print(f'Adenine is at position: {a_list}')
-# print(f'Cytosine is at position: {c_list}')
-# print(f'Guanine is at position: {g_list}')
-# print(f'Thymine is at position: {t_list}')
-
-# print(df)
-
-# fig = px.scatter(df, x = 'track', y = 'fragment length', color = 'nucleotide')
-# # plot.update_traces(marker=dict(color=col))
-
-# fig.show()
-
-
-# plt.scatter(df['track'], df['fragment length'], marker = '_', s = 500)
-# plt.ylim(max(df['fragment length']), min(df['fragment length'])-1)
-# listOf_Xticks = np.arange(1, 5, 1)
-# plt.xticks(listOf_Xticks)
-# plt.yticks([])
-# plt.xlabel('Tracks: 1 = A, 2 = C; 3 = G, 4 = T')
-# plt.show()
-
-# st.scatter_chart(
-#     df,
-#     x="track",
-#     y="fragment length",
-#     color="nucleotide"
-# )
-
-
-
 
 st.header('Polyacrylamide Gel Electrophoresis')
         
@@ -329,19 +298,3 @@ with col3:
     df_fragments = df_fragments.loc[::-1].reset_index(drop = True)
 
     st.table(df_fragments.Fragment)
-
-
-# ## Clinical applications of Sanger sequencing
-
-# Sanger sequencing remains the most accurate form of DNA sequencing and, although
-# there now exist other methods of sequencing, is still widely used in clinical 
-# laboratories for the following applications:
-
-#     Diagnostic sequencing of a single gene.
-#     Testing for a specific familial sequence variant. This can include:
-#         predictive genomic testing in at-risk relatives (for example, for a familial BRCA1 variant conferring breast cancer risk);
-#         carrier testing for parents, where a child has an autosomal recessive condition (for example, cystic fibrosis);
-#         prenatal testing for known familial variants; and
-#         segregation analysis, to aid the interpretation of the pathogenicity of a variant (for example, by establishing if a variant being investigated is present in an affected sibling as well as in the proband).
-#     To confirm variants that are identified by massively parallel sequencing (sometimes known as next-generation sequencing).
-#     To fill gaps in massively parallel sequencing data.
