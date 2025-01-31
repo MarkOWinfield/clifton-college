@@ -269,19 +269,3 @@ elif ORF_count > 1:
 else:
 
     st.write('The are no ORFs in this sequence.  Try generating a longer sequence')
-    
-    
-for k in range(20):
-    sequence = ''
-    for i in range(seq_len):
-        if unknown_seq[i] == 'T':
-            base=choice(bases)
-            sequence += base
-            if base == 'T-stop':
-                break
-            else:
-                continue
-        sequence += unknown_seq[i]
-    print(sequence)
-    sequence_list.append(sequence)
-    sequence_list.sort(key=len)
